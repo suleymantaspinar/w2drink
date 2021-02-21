@@ -1,0 +1,34 @@
+{
+  "name": "w2drink-frontend",
+  "version": "0.0.1",
+  "description": "Your cocktail assistant.",
+  "main": "./src/index.js",
+  "author": "Suleyman Taspinar",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "moment": "^2.24.0",
+    "moment-locales-webpack-plugin": "^1.1.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^3.0.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "license": "ISC"
+}
