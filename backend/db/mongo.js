@@ -14,10 +14,10 @@ const OPTIONS =  {
 
 const URL = `mongodb://${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DATABASE}`
 
-mongoose.connect(URL, { OPTIONS });
+mongoose.connect(URL, OPTIONS );
 
 mongoose.connection.on('connected', function () {
-    console.info(`Mongoose connected on port ${MONGODB_PORT}`);
+    console.info(`Mongoose ${URL} connected on port ${MONGODB_PORT}`);
 });
   
 mongoose.connection.on('error',function (err) {
