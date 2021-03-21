@@ -1,4 +1,4 @@
-const cocktail = require('../models/');
+const cocktail = require('../models/cocktail');
 
 module.exports = class CocktailService {
 
