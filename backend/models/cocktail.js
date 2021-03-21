@@ -18,6 +18,7 @@ const cocktailSchema = new mongoose.Schema({
    * @type {Stringr}
    */
   instruction: { type: String },
+
   /**
    * Ingredients array
    */
@@ -25,6 +26,7 @@ const cocktailSchema = new mongoose.Schema({
     amount: String,
     measurement: String
   }],
+  
   /**
    * Glass type
    */
