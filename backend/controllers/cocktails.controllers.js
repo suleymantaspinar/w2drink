@@ -1,6 +1,6 @@
 const CocktailService = require("../services/CocktailService");
 
-module.exports = class Article {
+module.exports = class Cocktail {
 
    static async apiGetAllCocktails(req, res, next) {
        try {
