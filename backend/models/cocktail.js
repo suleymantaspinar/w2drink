@@ -37,11 +37,6 @@ const cocktailSchema = new mongoose.Schema({
   glass: { name: String, size: String }
 })
 
-cocktailSchema.path('ingredients')
-.validate(
-  ingredients => ingredients && ingredients.length > 0,
-  'Ingredients needs to have at least one item'
-);
 
 const Cocktail = mongoose.model('Cocktail', cocktailSchema)
 
