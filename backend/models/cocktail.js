@@ -11,25 +11,32 @@ const cocktailSchema = new mongoose.Schema({
    * Cocktail category.
    * @type {String}
    */
-  category: { type: String },
+  category: { type: String, required: true },
 
   /**
    * Instructions for cocktails.
    * @type {Stringr}
    */
-  instruction: { type: String },
+  instructions: { type: String, required: true },
+
   /**
    * Ingredients array
    */
   ingredients: [{
-    amount: String,
-    measurement: String
+    name: {
+      type: String,
+    },
+    measurement: {
+      type: String,
+    }
   }],
+  
   /**
    * Glass type
    */
   glass: { name: String, size: String }
 })
+
 
 const Cocktail = mongoose.model('Cocktail', cocktailSchema)
 
