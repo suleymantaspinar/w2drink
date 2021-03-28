@@ -1,5 +1,4 @@
-const cocktail = require('../models/cocktail');
-
+const { Cocktail } = require('../models/cocktail');
 module.exports = class CocktailService {
 
     static async getAllCocktails() {
@@ -14,7 +13,7 @@ module.exports = class CocktailService {
     static async createCocktail(data) {
         try {
             const newCocktail = {
-                name: data.title,
+                name: data.name,
                 category: data.body,
                 instruction: data.Cocktail_image,
                 ingredients: data.ingredient,
@@ -57,7 +56,7 @@ module.exports = class CocktailService {
             const deletedResponse = await Cocktail.findOneAndDelete(CocktailId);
             return deletedResponse;
         } catch (error) {
-            console.log(`Could  ot delete Cocktail ${error}`);
+            console.log(`Could  not delete Cocktail ${error}`);
         }
 
     }
