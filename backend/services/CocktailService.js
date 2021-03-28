@@ -14,9 +14,9 @@ module.exports = class CocktailService {
         try {
             const newCocktail = {
                 name: data.name,
-                category: data.body,
-                instruction: data.Cocktail_image,
-                ingredients: data.ingredient,
+                category: data.category,
+                instructions: data.instructions,
+                ingredients: data.ingredients,
                 glass: data.glass
             }
            const response = await new Cocktail(newCocktail).save();

@@ -17,13 +17,13 @@ const cocktailSchema = new mongoose.Schema({
    * Instructions for cocktails.
    * @type {Stringr}
    */
-  instruction: { type: String, required: true },
+  instructions: { type: String, required: true },
 
   /**
    * Ingredients array
    */
   ingredients: [{
-    amount: {
+    name: {
       type: String,
     },
     measurement: {
@@ -37,11 +37,6 @@ const cocktailSchema = new mongoose.Schema({
   glass: { name: String, size: String }
 })
 
-cocktailSchema.path('ingredients')
-.validate(
-  ingredients => ingredients && ingredients.length > 0,
-  'Ingredients needs to have at least one item'
-);
 
 const Cocktail = mongoose.model('Cocktail', cocktailSchema)
 
