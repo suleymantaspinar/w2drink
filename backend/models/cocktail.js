@@ -17,13 +17,13 @@ const cocktailSchema = new mongoose.Schema({
    * Instructions for cocktails.
    * @type {Stringr}
    */
-  instruction: { type: String, required: true },
+  instructions: { type: String, required: true },
 
   /**
    * Ingredients array
    */
   ingredients: [{
-    amount: {
+    name: {
       type: String,
     },
     measurement: {
