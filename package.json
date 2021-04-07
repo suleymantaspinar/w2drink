@@ -4,7 +4,7 @@
   "description": "Simple REST API for w2drink",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --ignore tests",
+    "dev": "nodemon --ignore backend/tests",
     "test": "jest"
   },
   "jest": {
