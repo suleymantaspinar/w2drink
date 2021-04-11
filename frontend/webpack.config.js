@@ -20,7 +20,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      vue: "vue/dist/vue.js", // Vue toastr needs this
+      vue: "vue/dist/vue.js",
     }
   },
 

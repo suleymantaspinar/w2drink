@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./frontend:/data
+    environment:
+      - API_URL=http://localhost:3000/
+
+  backend:
+    build: ./backend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend:/data
+    depends_on:
+      - database
+    environment:
+      - DATABASE_URL=database:27017
+
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db

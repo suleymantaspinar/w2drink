@@ -4,7 +4,8 @@
   "description": "Simple REST API for w2drink",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --ignore tests",
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore tests",
     "test": "jest"
   },
   "jest": {
@@ -21,6 +22,7 @@
   "devDependencies": {
     "csv-parser": "^3.0.0",
     "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
     "strip-bom-stream": "^4.0.0"
   }
 }
