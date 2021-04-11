@@ -1,10 +1,10 @@
 FROM node:carbon
 
-COPY . .
+WORKDIR /app
 
-WORKDIR /data/
+COPY . .
 
 RUN npm install
 
-EXPOSE 8081
-CMD ["npm", "start"]
+EXPOSE 3000
+CMD ["npm", "dev"]
